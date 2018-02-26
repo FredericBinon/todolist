@@ -1,1 +1,2 @@
-Caroussel.
+<li><input type='checkbox'><label>Ecureuil</label><button class='delete'>Delete</button></li> 
+<li><input type='checkbox'><label>Ecureuil</label><button class='delete'>Delete</button></li> 

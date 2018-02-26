@@ -8,10 +8,19 @@
   <title>Document</title>
 </head>
 <body>
-  <main>
+  <div class='principal'>
     <div class="Oui">
-		  <h2 style="font-style: 'Hervetica';">TODODODODO</h2>
+		  <h2>Tasks you still have to do</h2>
+      <?php
+      $file="todo.json";
+      $current=file_get_contents($file);
+      ?>
+      <ul>
+        <?php echo "$current"?>
+      </ul>
 	  </div>
-  </main>
+  <hr/>
+     <h2>Tasks done</h2>
+  </div>
 </body>
 </html>

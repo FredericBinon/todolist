@@ -1,0 +1,58 @@
+body {
+  background-color: #100100;
+  color: white;
+}
+
+main{
+  width: 500px;
+  height:auto;
+  border-radius: 10px;
+  background-color: #292121;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 10vh;
+  padding: 2vh 0vh 0vh 5vh;
+}
+
+.principal{
+  padding-bottom: 3vh;
+}
+
+h2{
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.Oui{
+  margin-bottom: 5vh;
+}
+
+li{
+  list-style: none;
+}
+
+form{
+  margin-bottom: 3vh;
+}
+
+hr{
+margin-right: 18vh;
+}
+
+li{
+  background-color: #B1BBC7;
+  width:47vh;
+  margin-bottom: 2vh;
+  border-radius: 5px;
+  padding: 8px;
+  color:black;
+  font-size: 17px;
+}
+
+.delete{
+  float: right;
+}
+
+label{
+  margin-left: 2vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}

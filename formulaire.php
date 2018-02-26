@@ -2,17 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./style.css" type="text/css" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
 <body>
-  <main>
-    <div class="ajout">
-		  <h2 style="font-style: 'Hervetica';">Add a new task.</h2>
-	  </div>
+  <div class='principal'>
 	  <form method="post" action="todolist.php" name="formulaire" id="formulaire" class="textarea">
       <input type="textarea" name="area" placeholder="New task">
 	  	<button type="submit" name="submit" form="formulaire">Add</button>
@@ -22,18 +18,19 @@
           $area =  trim($_POST['area']);
         if (!empty($area)){
           $sanetize = filter_var($area, FILTER_SANITIZE_STRING);
-          echo $sanetize;
+
+            $file="todo.json";
+            $current=file_get_contents($file);
+            $current.="<li><input type='checkbox'><label>$sanetize</label><button class='delete'>Delete</button></li> \n";
+            file_put_contents($file,$current);
         }
         else{
-          echo "There is a problem";
+          echo "Please write your task in the input.";
+          $sanetize="";
         }
       }
-
-    $file="todo.json";
-    $current=file_get_contents($file);
-    $current.=$sanetize ."\n";
-    file_put_contents($file,$current);
     ?>
-  </main>
+  </div>
+<hr/>
 </body>
 </html>
